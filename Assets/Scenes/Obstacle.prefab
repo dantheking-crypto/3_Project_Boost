@@ -10,17 +10,17 @@ PrefabInstance:
     - target: {fileID: 2413042219247937346, guid: a3a54fc7be411428ca3f4764721fce6a,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 15.91
+      value: -20.7
       objectReference: {fileID: 0}
     - target: {fileID: 2413042219247937346, guid: a3a54fc7be411428ca3f4764721fce6a,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.53
+      value: 7.9
       objectReference: {fileID: 0}
     - target: {fileID: 2413042219247937346, guid: a3a54fc7be411428ca3f4764721fce6a,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.14667892
+      value: -0.06
       objectReference: {fileID: 0}
     - target: {fileID: 2413042219247937346, guid: a3a54fc7be411428ca3f4764721fce6a,
         type: 3}
@@ -65,17 +65,22 @@ PrefabInstance:
     - target: {fileID: 2413042219247937346, guid: a3a54fc7be411428ca3f4764721fce6a,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 10.016
+      value: 4.9556637
+      objectReference: {fileID: 0}
+    - target: {fileID: 2413042219247937346, guid: a3a54fc7be411428ca3f4764721fce6a,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 17.686499
       objectReference: {fileID: 0}
     - target: {fileID: 5395524333879336930, guid: a3a54fc7be411428ca3f4764721fce6a,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: bc182873887e441959ad05f8de88f6f9, type: 2}
+      objectReference: {fileID: 2100000, guid: fa9137d44c3cf431db12cadec26745de, type: 2}
     - target: {fileID: 6301334224386470556, guid: a3a54fc7be411428ca3f4764721fce6a,
         type: 3}
       propertyPath: m_Name
-      value: Obstacle Variant
+      value: Obstacle
       objectReference: {fileID: 0}
     - target: {fileID: 6301334224386470556, guid: a3a54fc7be411428ca3f4764721fce6a,
         type: 3}

@@ -1,7 +1,5 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Rocket : MonoBehaviour
 {
@@ -9,6 +7,8 @@ public class Rocket : MonoBehaviour
     [SerializeField] float mainThrust = 1f;
     Rigidbody rigidBody;
     AudioSource audioSource;
+    enum State  {Alive, Dying, Transcending}
+    State state = State.Alive;
     // Start is called before the first frame update
     void Start()
     {
@@ -35,10 +35,21 @@ public class Rocket : MonoBehaviour
             case "Friendly":
                 print("OK");
                 break;
+            case "Finish":
+                // print("Hit finish");
+                state = State.Transcending;
+                Invoke("LoadNextScene", 1f);
+                break;
             default:
                 print("Collided");
+                SceneManager.LoadScene(0);
                 break;
         }
+    }
+
+    private void LoadNextScene()
+    {
+        SceneManager.LoadScene(1);
     }
 
     private void Thrust()

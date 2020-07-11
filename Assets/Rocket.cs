@@ -33,7 +33,7 @@ public class Rocket : MonoBehaviour
         switch (collision.gameObject.tag)
         {
             case "Friendly":
-                print("OK");
+                //print("OK");
                 break;
             case "Finish":
                 // print("Hit finish");
@@ -41,10 +41,16 @@ public class Rocket : MonoBehaviour
                 Invoke("LoadNextScene", 1f);
                 break;
             default:
-                print("Collided");
-                SceneManager.LoadScene(0);
+                //print("Collided");
+                state = State.Dying;
+                Invoke("LoadFirstScene", 2f);
                 break;
         }
+    }
+
+    private void LoadFirstScene()
+    {
+        SceneManager.LoadScene(0);
     }
 
     private void LoadNextScene()

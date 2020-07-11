@@ -1,4 +1,7 @@
-﻿using UnityEngine;
+﻿using System;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class Rocket : MonoBehaviour
@@ -10,16 +13,16 @@ public class Rocket : MonoBehaviour
     enum State  {Alive, Dying, Transcending}
     State state = State.Alive;
     // Start is called before the first frame update
-    void Start()
+    void Start() 
     {
         rigidBody = GetComponent<Rigidbody>();
         audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
-    void Update()
+    void Update() 
     {
-        ProcessInput(); 
+        if (state == State.Alive) ProcessInput();
     }
 
     private void ProcessInput()
@@ -30,6 +33,7 @@ public class Rocket : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
+        if (state != State.Alive) return;
         switch (collision.gameObject.tag)
         {
             case "Friendly":

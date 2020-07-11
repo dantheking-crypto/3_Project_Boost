@@ -8,6 +8,12 @@ public class Rocket : MonoBehaviour
 {
     [SerializeField] float rcsThrust = 100f;
     [SerializeField] float mainThrust = 1f;
+    [SerializeField] AudioClip mainEngine;
+    [SerializeField] AudioClip DeathSound;
+    [SerializeField] AudioClip SuccessSound;
+    [SerializeField] ParticleSystem mainEngineParticles;
+    [SerializeField] ParticleSystem DeathParticles;
+    [SerializeField] ParticleSystem SuccessParticles;
     Rigidbody rigidBody;
     AudioSource audioSource;
     enum State  {Alive, Dying, Transcending}
@@ -27,8 +33,8 @@ public class Rocket : MonoBehaviour
 
     private void ProcessInput()
     {
-        Thrust();
-        Rotate();
+        RespondToThrustInput();
+        RespondToRotateInput();
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -41,16 +47,32 @@ public class Rocket : MonoBehaviour
                 break;
             case "Finish":
                 // print("Hit finish");
-                state = State.Transcending;
-                Invoke("LoadNextScene", 1f);
+                StartSuccessSequence();
                 break;
             default:
                 //print("Collided");
-                state = State.Dying;
-                Invoke("LoadFirstScene", 2f);
+                StartDeathSequence();
                 break;
         }
     }
+
+    private void StartSuccessSequence()
+    {
+        state = State.Transcending;
+        audioSource.Stop();
+        audioSource.PlayOneShot(SuccessSound);
+        SuccessParticles.Play();
+        Invoke("LoadNextScene", 1f);
+    }
+    private void StartDeathSequence()
+    {
+        state = State.Dying;
+        audioSource.Stop();
+        audioSource.PlayOneShot(DeathSound);
+        DeathParticles.Play();
+        Invoke("LoadFirstScene", 2f);
+    }
+
 
     private void LoadFirstScene()
     {
@@ -62,19 +84,27 @@ public class Rocket : MonoBehaviour
         SceneManager.LoadScene(1);
     }
 
-    private void Thrust()
+    private void RespondToThrustInput()
     {
         if (Input.GetKey(KeyCode.Space))
         {
-            rigidBody.AddRelativeForce(Vector3.up * mainThrust);
-            if (!audioSource.isPlaying) audioSource.Play();
+            ApplyThrust();
         }
         else
         {
             audioSource.Stop();
+            mainEngineParticles.Stop();
         }
     }
-    private void Rotate()
+
+    private void ApplyThrust()
+    {
+        rigidBody.AddRelativeForce(Vector3.up * mainThrust);
+        if (!audioSource.isPlaying) audioSource.PlayOneShot(mainEngine);
+        mainEngineParticles.Play();
+    }
+
+    private void RespondToRotateInput()
     {
         rigidBody.freezeRotation = true; // Take control of rotation
         

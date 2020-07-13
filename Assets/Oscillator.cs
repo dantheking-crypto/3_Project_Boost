@@ -5,7 +5,7 @@ using UnityEngine;
 public class Oscillator : MonoBehaviour
 {
     [SerializeField] Vector3 movementVector = new Vector3(10f, 10f, 10f);
-    [Range(0, 1)] [SerializeField] float movementFactor;
+    [Range(-1, 1)] [SerializeField] float movementFactor;
     Vector3 startingPos;
     [SerializeField] float period = 2f;
     const float tau = Mathf.PI * 2;
@@ -20,8 +20,7 @@ public class Oscillator : MonoBehaviour
     {
         if (period <= Mathf.Epsilon) return;
         float cycles = Time.time / period;
-        float rawSinWave = Mathf.Sin(cycles * tau);
-        movementFactor = (rawSinWave + 1) / 2f;
+        movementFactor = Mathf.Sin(cycles * tau);
         Vector3 offset = movementVector * movementFactor;
         transform.position = startingPos + offset;
     }

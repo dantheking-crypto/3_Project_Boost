@@ -19,13 +19,11 @@ public class Rocket : MonoBehaviour
     AudioSource audioSource;
     enum State  {Alive, Dying, Transcending}
     State state = State.Alive;
-    float fps;
     // Start is called before the first frame update
     void Start() 
     {
         rigidBody = GetComponent<Rigidbody>();
         audioSource = GetComponent<AudioSource>();
-        fps = 1f / Time.deltaTime;
     }
 
     // Update is called once per frame
@@ -102,7 +100,7 @@ public class Rocket : MonoBehaviour
 
     private void ApplyThrust()
     {
-        rigidBody.AddRelativeForce(Vector3.up * mainThrust * Time.deltaTime * fps);
+        rigidBody.AddRelativeForce(Vector3.up * mainThrust * Time.deltaTime);
         if (!audioSource.isPlaying) audioSource.PlayOneShot(mainEngine);
         mainEngineParticles.Play();
     }

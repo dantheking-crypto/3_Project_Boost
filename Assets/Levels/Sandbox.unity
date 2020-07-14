@@ -35,10 +35,10 @@ RenderSettings:
   m_DefaultReflectionMode: 0
   m_DefaultReflectionResolution: 128
   m_ReflectionBounces: 1
-  m_ReflectionIntensity: 0.3
+  m_ReflectionIntensity: 0.5
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 1411277182}
-  m_IndirectSpecularColor: {r: 0.24871951, g: 0.2788953, b: 0.32637137, a: 0.3}
+  m_IndirectSpecularColor: {r: 0.32075924, g: 0.35809246, b: 0.41682947, a: 0.5}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -165,8 +165,8 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 20
-  m_Range: 22.3881
+  m_Intensity: 4.61
+  m_Range: 17.202341
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -815,7 +815,7 @@ PrefabInstance:
     - target: {fileID: 7290872185907806979, guid: 0cb1b122ea742468eb7f38a47fdf0a18,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.1
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 7290872185907806979, guid: 0cb1b122ea742468eb7f38a47fdf0a18,
         type: 3}

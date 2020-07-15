@@ -314,7 +314,7 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 246.4
+  m_Intensity: 423.4
   m_Range: 24.165352
   m_SpotAngle: 123.49176
   m_InnerSpotAngle: 21.80208
@@ -1066,21 +1066,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8491978336791040139, guid: c0c7f74044df14d4c807436436ee2b6f,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 51.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 8491978336791040139, guid: c0c7f74044df14d4c807436436ee2b6f,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 13.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 8491978336791040139, guid: c0c7f74044df14d4c807436436ee2b6f,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -4.2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c0c7f74044df14d4c807436436ee2b6f, type: 3}

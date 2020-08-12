@@ -165,7 +165,7 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 4.54
+  m_Intensity: 0.83
   m_Range: 20.039707
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -372,9 +372,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 165192f93264247b7a121bd50d903cc3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementVector: {x: 0, y: 5, z: 0}
+  movementVector: {x: 0, y: 15, z: 0}
   movementFactor: 0
-  period: 2
+  period: 4
 --- !u!1 &1177498743
 GameObject:
   m_ObjectHideFlags: 0
@@ -510,9 +510,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 165192f93264247b7a121bd50d903cc3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementVector: {x: 0, y: -5, z: 0}
+  movementVector: {x: 0, y: -15, z: 0}
   movementFactor: 0
-  period: 2
+  period: 4
 --- !u!1001 &1411277181
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -810,12 +810,12 @@ PrefabInstance:
     - target: {fileID: 7290872185907806979, guid: 0cb1b122ea742468eb7f38a47fdf0a18,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.2
+      value: -3.1
       objectReference: {fileID: 0}
     - target: {fileID: 7290872185907806979, guid: 0cb1b122ea742468eb7f38a47fdf0a18,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.1
+      value: 16.3
       objectReference: {fileID: 0}
     - target: {fileID: 7290872185907806979, guid: 0cb1b122ea742468eb7f38a47fdf0a18,
         type: 3}
@@ -865,7 +865,7 @@ PrefabInstance:
     - target: {fileID: 7290872185907806979, guid: 0cb1b122ea742468eb7f38a47fdf0a18,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 55.19083
+      value: 14.560445
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0cb1b122ea742468eb7f38a47fdf0a18, type: 3}

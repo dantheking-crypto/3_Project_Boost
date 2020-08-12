@@ -35,10 +35,10 @@ RenderSettings:
   m_DefaultReflectionMode: 0
   m_DefaultReflectionResolution: 128
   m_ReflectionBounces: 1
-  m_ReflectionIntensity: 0.3
+  m_ReflectionIntensity: 0.35
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 1585733127}
-  m_IndirectSpecularColor: {r: 0.24871951, g: 0.2788953, b: 0.32637137, a: 0.3}
+  m_IndirectSpecularColor: {r: 0.26886734, g: 0.3010449, b: 0.35167038, a: 0.35}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -517,9 +517,9 @@ Light:
   m_Type: 0
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 0.99
-  m_Range: 10.596773
-  m_SpotAngle: 92.29813
+  m_Intensity: 1.2
+  m_Range: 11.3
+  m_SpotAngle: 93.19
   m_InnerSpotAngle: 6
   m_CookieSize: 10
   m_Shadows:
@@ -587,6 +587,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 744627546, guid: 5eeae6aaf3a534a89889eb23f70c0f6f, type: 3}
+      propertyPath: m_Range
+      value: 7.952791
+      objectReference: {fileID: 0}
+    - target: {fileID: 744627546, guid: 5eeae6aaf3a534a89889eb23f70c0f6f, type: 3}
+      propertyPath: m_Intensity
+      value: 1.28
+      objectReference: {fileID: 0}
     - target: {fileID: 2879906941315754566, guid: 5eeae6aaf3a534a89889eb23f70c0f6f,
         type: 3}
       propertyPath: m_Name
@@ -968,6 +976,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalRotation.w
       value: 0.99481404
+      objectReference: {fileID: 0}
+    - target: {fileID: 1440436637352450594, guid: 61005b3a79f1d4fbbb2e8d610795f201,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.52
       objectReference: {fileID: 0}
     - target: {fileID: 1440436637352450599, guid: 61005b3a79f1d4fbbb2e8d610795f201,
         type: 3}
